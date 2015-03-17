@@ -1,0 +1,107 @@
+
+package charts;
+
+import cytoscape.CyNode;
+import cytoscape.Cytoscape;
+import cytoscape.data.CyAttributes;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.util.Iterator;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import org.jfree.chart.*;
+import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
+import org.jfree.data.xy.DefaultXYDataset;
+import org.jfree.data.xy.XYDataset;
+import org.jfree.ui.ApplicationFrame;
+import org.jfree.ui.RefineryUtilities;
+
+// Referenced classes of package demo:
+import utils.Centrality;
+//            SampleXYDataset2
+
+public class ScatterPlot extends JFrame
+{
+
+    private static Centrality x;
+    private static Centrality y;
+    
+    public ScatterPlot(String s)
+    {
+        super(s);
+        JPanel jpanel = createDemoPanel();
+        //jpanel.setPreferredSize(new Dimension(500, 270));
+        setContentPane(jpanel);
+    }
+    
+    public ScatterPlot(Centrality x,Centrality y){
+        super("scatter plot for "+x.getName()+"/"+y.getName());
+        this.x=x;
+        this.y=y;
+        this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        JPanel jpanel = createDemoPanel();
+        setContentPane(jpanel);
+    }
+
+    private static JFreeChart createChart(XYDataset xydataset)
+    {
+        JFreeChart jfreechart = ChartFactory.createScatterPlot("Centiscape Scatter Plot view", x.getName(), y.getName(), xydataset, PlotOrientation.VERTICAL, false, true, true);
+        XYPlot xyplot = (XYPlot)jfreechart.getPlot();
+        xyplot.setNoDataMessage("NO DATA");
+        xyplot.setDomainZeroBaselineVisible(true);
+        xyplot.setRangeZeroBaselineVisible(true);
+        XYLineAndShapeRenderer xylineandshaperenderer = (XYLineAndShapeRenderer)xyplot.getRenderer();
+        xylineandshaperenderer.setSeriesOutlinePaint(0, Color.black);
+        xylineandshaperenderer.setUseOutlinePaint(true);
+        NumberAxis numberaxis = (NumberAxis)xyplot.getDomainAxis();
+        numberaxis.setAutoRangeIncludesZero(false);
+        numberaxis.setTickMarkInsideLength(2.0F);
+        numberaxis.setTickMarkOutsideLength(0.0F);
+        NumberAxis numberaxis1 = (NumberAxis)xyplot.getRangeAxis();
+        numberaxis1.setTickMarkInsideLength(2.0F);
+        numberaxis1.setTickMarkOutsideLength(0.0F);
+        return jfreechart;
+    }
+
+    // create an XYDataSet for scatter plot from x-y centralities information
+    private static DefaultXYDataset createDataSet(){
+        double vx,vy;
+        DefaultXYDataset dxy=new DefaultXYDataset();
+        // X-Y value
+        //double[][] val=new double[2][1];
+        CyAttributes cattr = Cytoscape.getNodeAttributes();
+        for (Iterator it = Cytoscape.getCurrentNetwork().nodesIterator(); it.hasNext();) {
+            double[][] val=new double[2][1];
+            CyNode node = (CyNode) it.next();
+            vx=cattr.getDoubleAttribute(node.getIdentifier(), x.getName());
+            vy=cattr.getDoubleAttribute(node.getIdentifier(), y.getName());
+            val[0][0]=vx;
+            val[1][0]=vy;
+            dxy.addSeries(node.getIdentifier(), val);
+        }
+        return(dxy);
+    }
+    
+    public static JPanel createDemoPanel()
+    {
+        JFreeChart jfreechart = createChart(createDataSet());
+        ChartPanel chartpanel = new ChartPanel(jfreechart);
+        chartpanel.setVerticalAxisTrace(true);
+        chartpanel.setHorizontalAxisTrace(true);
+        chartpanel.setPopupMenu(null);
+        chartpanel.setDomainZoomable(true);
+        chartpanel.setRangeZoomable(true);
+        return chartpanel;
+    }
+
+    public static void main(String args[])
+    {
+        ScatterPlot scatterplotdemo1 = new ScatterPlot("Scatter Plot");
+        scatterplotdemo1.pack();
+        RefineryUtilities.centerFrameOnScreen(scatterplotdemo1);
+        scatterplotdemo1.setVisible(true);
+    }
+}

@@ -1,0 +1,73 @@
+/*
+ * ClosenessMethods.java
+ *
+ * Created on 7 dicembre 2007, 16.15
+ *
+ * To change this template, choose Tools | Template Manager
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author scardoni
+ */
+package Closeness;
+
+import java.util.*;
+import java.util.*;
+import java.util.List;
+import java.awt.event.ActionEvent;
+import javax.swing.JOptionPane;
+import javax.swing.JList;
+import javax.swing.*;
+import giny.model.Node;
+import giny.view.NodeView;
+import cytoscape.plugin.CytoscapePlugin;
+import cytoscape.util.CytoscapeAction;
+import cytoscape.Cytoscape;
+import cytoscape.CyNetwork;
+import cytoscape.CyNode;
+import cytoscape.CyEdge;
+import cytoscape.view.CyNetworkView;
+import cytoscape.data.Semantics;
+import cytoscape.data.CyAttributesImpl;
+import cytoscape.data.CyAttributes;
+import Closeness.*;
+import Centroid.*;        
+import Stress.*;
+import Degree.*;
+import Radiality.*;
+import Closeness.*;
+import Eccentricity.*;
+import centiscape.*;
+
+public class ClosenessMethods {
+    
+    /** Creates a new instance of ClosenessMethods */
+    public ClosenessMethods() {
+    }
+    
+      public static FinalResultCloseness CalculateCloseness(Vector SingleShortestPathVector,CyNode CurrentRoot ) {
+           
+            int CurrentClosenessSum=0;
+           // Vector ClosenessVector = new Vector();
+                CentiScaPeShortestPathList CurrentClosenessList;
+                FinalResultCloseness CurrentCloseness = new FinalResultCloseness(CurrentRoot.getIdentifier(),0);
+                       
+                for (int j = 0; j < SingleShortestPathVector.size(); j++) {
+                      
+                     CurrentClosenessList = (CentiScaPeShortestPathList)SingleShortestPathVector.get(j);
+                     
+                       CurrentClosenessSum = CurrentClosenessSum + CurrentClosenessList.size()-1;
+                       
+                    }
+                   
+                double CurrentClosenessValue = (1/(double)CurrentClosenessSum);
+                CurrentCloseness.update(CurrentClosenessValue);
+                //ClosenessVector.addElement(CurrentCloseness);
+                
+           return CurrentCloseness;
+           
+       } 
+    
+}

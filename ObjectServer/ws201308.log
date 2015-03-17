@@ -1,0 +1,82 @@
+2013-08-20 16:31:36 Request: Creating connection
+2013-08-20 16:31:36 Request: com.mysql.jdbc.Driver
+2013-08-20 16:31:36 Request: Connection error
+2013-08-20 17:10:36 Request: Creating connection
+2013-08-20 17:10:36 Request: com.mysql.jdbc.Driver
+2013-08-20 17:10:36 Request: Connection error
+2013-08-20 17:14:35 Request: Creating connection
+2013-08-20 17:14:35 Request: com.mysql.jdbc.Driver
+2013-08-20 17:14:35 Request: Connection error
+2013-08-20 17:14:35 blnVerifyRequest: Creating connection
+2013-08-20 17:14:35 blnVerifyRequest: com.mysql.jdbc.Driver
+2013-08-20 17:14:35 blnVerifyRequest: Connection error
+2013-08-20 17:14:35 Not authenticate user for this request: h@g - -1
+2013-08-20 17:19:49 Request: Creating connection
+2013-08-20 17:19:49 Request: com.mysql.jdbc.Driver
+2013-08-20 17:19:49 Request: Connection error
+2013-08-20 17:19:49 blnVerifyRequest: Creating connection
+2013-08-20 17:19:49 blnVerifyRequest: com.mysql.jdbc.Driver
+2013-08-20 17:19:49 blnVerifyRequest: Connection error
+2013-08-20 17:19:49 Not authenticate user for this request: g@g - -1
+2013-08-20 17:22:10 Request: Creating connection
+2013-08-20 17:22:10 Request: com.mysql.jdbc.Driver
+2013-08-20 17:22:10 Request: Connection error
+2013-08-20 17:22:10 blnVerifyRequest: Creating connection
+2013-08-20 17:22:10 blnVerifyRequest: com.mysql.jdbc.Driver
+2013-08-20 17:22:10 blnVerifyRequest: Connection error
+2013-08-20 17:22:10 Not authenticate user for this request: g@g - -1
+2013-08-20 17:24:23 Request: Creating connection
+2013-08-20 17:24:23 Request: com.mysql.jdbc.Driver
+2013-08-20 17:24:23 Request: Connection error
+2013-08-20 17:24:23 lngFileDisponibile: Creating connection
+2013-08-20 17:24:23 lngFileDisponibile: com.mysql.jdbc.Driver
+2013-08-20 17:24:23 lngFileDisponibile: Connection error
+2013-08-20 17:24:23 PROBLEM in receiving file; can't start FastCentMonitor
+2013-08-20 17:24:23 Web Service End
+2013-08-20 17:25:48 Request: Creating connection
+2013-08-20 17:25:49 Request: com.mysql.jdbc.Driver
+2013-08-20 17:25:49 Request: Connection error
+2013-08-20 17:25:49 lngFileDisponibile: Creating connection
+2013-08-20 17:25:49 lngFileDisponibile: com.mysql.jdbc.Driver
+2013-08-20 17:25:49 lngFileDisponibile: Connection error
+2013-08-20 17:25:49 PROBLEM in receiving file; can't start FastCentMonitor
+2013-08-20 17:25:49 Web Service End
+2013-08-20 17:29:05 Request: Creating connection
+2013-08-20 17:29:05 Request: com.mysql.jdbc.Driver
+2013-08-20 17:29:05 Request: Connection error
+2013-08-20 17:29:05 lngFileDisponibile: Creating connection
+2013-08-20 17:29:05 lngFileDisponibile: com.mysql.jdbc.Driver
+2013-08-20 17:29:05 lngFileDisponibile: Connection error
+2013-08-20 17:29:05 PROBLEM in receiving file; can't start FastCentMonitor
+2013-08-20 17:29:05 Web Service End
+2013-08-20 17:34:33 Request: Creating connection
+2013-08-20 17:34:33 Request: com.mysql.jdbc.Driver
+2013-08-20 17:34:33 Request: Connection error
+2013-08-20 17:34:33 lngFileDisponibile: Creating connection
+2013-08-20 17:34:33 lngFileDisponibile: com.mysql.jdbc.Driver
+2013-08-20 17:34:33 lngFileDisponibile: Connection error
+2013-08-20 17:34:33 PROBLEM in receiving file; can't start FastCentMonitor
+2013-08-20 17:34:33 Web Service End
+2013-08-20 17:35:48 Request: Creating connection
+2013-08-20 17:35:48 Request: com.mysql.jdbc.Driver
+2013-08-20 17:35:48 Request: Connection error
+2013-08-20 17:35:48 lngFileDisponibile: Creating connection
+2013-08-20 17:35:48 lngFileDisponibile: com.mysql.jdbc.Driver
+2013-08-20 17:35:48 lngFileDisponibile: Connection error
+2013-08-20 17:35:48 PROBLEM in receiving file; can't start FastCentMonitor
+2013-08-20 17:35:48 Web Service End
+2013-08-21 15:03:17 Request: Creating connection
+2013-08-21 15:03:17 Request: com.mysql.jdbc.Driver
+2013-08-21 15:03:17 Request: Connection error
+2013-08-21 15:03:17 blnVerifyRequest: Creating connection
+2013-08-21 15:03:17 blnVerifyRequest: com.mysql.jdbc.Driver
+2013-08-21 15:03:17 blnVerifyRequest: Connection error
+2013-08-21 15:03:17 Not authenticate user for this request: l@l - -1
+2013-08-21 15:05:38 Request: Creating connection
+2013-08-21 15:05:38 Request: com.mysql.jdbc.Driver
+2013-08-21 15:05:38 Request: Connection error
+2013-08-21 15:05:38 lngFileDisponibile: Creating connection
+2013-08-21 15:05:38 lngFileDisponibile: com.mysql.jdbc.Driver
+2013-08-21 15:05:38 lngFileDisponibile: Connection error
+2013-08-21 15:05:38 PROBLEM in receiving file; can't start FastCentMonitor
+2013-08-21 15:05:38 Web Service End

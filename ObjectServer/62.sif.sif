@@ -1,0 +1,16 @@
+IQGAP1 (pp) ATP5A1
+TTN (pp) VIM
+FLNA (pp) VIM
+FLNA (pp) ACTN1
+FLNA (pp) TTN
+FLNA (pp) MYH9
+FLNA (pp) TLN1
+MYH9 (pp) VIM
+ATP5A1 (pp) MYH9
+MYH9 (pp) TTN
+MYH9 (pp) ACTN1
+ACTN1 (pp) TTN
+TLN1 (pp) FN1
+ATP5A1 (pp) VIM
+ATP5A1 (pp) TTN
+VIM (pp) TLN1

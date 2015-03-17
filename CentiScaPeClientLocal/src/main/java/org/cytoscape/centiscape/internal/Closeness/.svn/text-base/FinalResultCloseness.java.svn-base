@@ -1,0 +1,68 @@
+/*
+ * FinalResultCloseness.java
+ *
+ * Created on 15 marzo 2007, 18.06
+ *
+ * To change this template, choose Tools | Template Manager
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author scardoni
+ */
+package Closeness;
+
+public class FinalResultCloseness implements Comparable {
+    
+    private String nodename;
+    private double Closeness;
+    
+    /**
+     * Creates a new instance of FinalResultCloseness
+     */
+    public FinalResultCloseness() {
+    }
+    
+    public FinalResultCloseness(String Nodename, double clo) {
+        this.nodename = Nodename;
+        this.Closeness = clo;
+    }
+    
+    public void update(double clovalue) {
+        Closeness = Closeness + clovalue;
+    }
+    
+    public boolean Nameequals(String name) {
+        return this.nodename.equals(name);
+    }
+    
+    public String toString(){
+        String result= "node name= " + nodename + " Closeness =" + Closeness;
+        return result;
+    }
+    
+    public String getName() {
+        return nodename;
+    }
+    
+    public double getCloseness() {
+        
+        return Closeness;
+    }
+    
+    public String getstringCloseness() {
+        
+        return "" + Closeness;
+    }
+    
+    public int compareTo(Object c) {
+        FinalResultCloseness c2 = (FinalResultCloseness)c;
+        if (this.getCloseness() > c2.getCloseness())
+        return -1;
+        else if (this.getCloseness() < c2.getCloseness())
+        return 1;
+        else return 0;
+    }
+    
+}

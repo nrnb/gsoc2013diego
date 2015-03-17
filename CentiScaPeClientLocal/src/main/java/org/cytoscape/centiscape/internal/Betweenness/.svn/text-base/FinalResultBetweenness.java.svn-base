@@ -1,0 +1,62 @@
+/*
+ * FinalResultBetweenness.java
+ *
+ * Created on 15 marzo 2007, 18.06
+ *
+ * To change this template, choose Tools | Template Manager
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author scardoni
+ */
+package Betweenness;
+
+public class FinalResultBetweenness implements Comparable {
+    
+    private String nodename;
+    private double Betweenness;
+    
+    /**
+     * Creates a new instance of FinalResultBetweenness
+     */
+    public FinalResultBetweenness() {
+    }
+    
+    public FinalResultBetweenness(String Nodename, double btw) {
+        this.nodename = Nodename;
+        this.Betweenness = btw;
+    }
+    
+    public void update(double btwvalue) {
+        Betweenness = Betweenness + btwvalue;
+    }
+    
+    public boolean Nameequals(String name) {
+        return this.nodename.equals(name);
+    }
+    
+    public String toString(){
+        String result= "node name= " + nodename + " betweenness =" + Betweenness;
+        return result;
+    }
+    
+    public String getName() {
+        return nodename;
+    }
+    
+    public double getBetweenness() {
+        return Betweenness;
+    }
+    
+    public int compareTo(Object c) {
+        FinalResultBetweenness c2 = (FinalResultBetweenness)c;
+        if (this.getBetweenness() > c2.getBetweenness())
+        return -1;
+        else if (this.getBetweenness() < c2.getBetweenness())
+        return 1;
+        else return 0;
+    }
+    
+}
